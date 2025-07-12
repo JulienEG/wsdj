@@ -1,23 +1,7 @@
 const app = new Vue({
   el: "#app",
   data: {
-    notes: [
-      " ",
-      "A",
-      "A#",
-      "B",
-      "B#",
-      "C",
-      "C#",
-      "D",
-      "D#",
-      "E",
-      "E#",
-      "F",
-      "F#",
-      "G",
-      "G#",
-    ],
+    notes: [" ", "A", "A#", "B", "B#", "C", "C#", "D", "D#" ,"E" ,"E#" ,"F" ,"F#" ,"G", "G#"],
     currentNoteIndex: 0,
     pitches: [" ", "1", "2", "3", "4", "5", "6", "7", "8"],
     currentPitchIndex: 0,
@@ -27,8 +11,22 @@ const app = new Vue({
     pulse2Notes: [],
     waveNotes: [],
     noiseNotes: [],
+    pu1Synth: null,
+    pu2Synth: null,
+  },
+  mounted() {
+    // Synths initialisation
+    this.pu1Synth = new Tone.Synth({
+      oscillator: {
+        type: "pulse",
+        width: 0.125 // 0.125, 0.25, 0.50, 0.75
+      }
+    }).toDestination();
+
+
   },
   computed: {},
+
   methods: {
     onScrollCell(event, indexName, arrayName) {
       const dir = event.deltaY > 0 ? 1 : -1;
@@ -47,12 +45,24 @@ const app = new Vue({
     onClickCell(indexName) {
       this[indexName] = 0;
     },
-  },
+
+    async playNote() {
+      if (Tone.context !== "running") {
+        await Tone.start;
+      }
+      this.pu1Synth.triggerAttackRelease("C4", "16n");
+    },
+
+    //// Synths Methods ////
+    
+    setPulseWidth(synth, width) {
+      synth.oscillator.width = width;
+    },
+  }
 });
 
-function playNote() {
-  // create a synth
-  const synth = new Tone.Synth().toDestination();
-  // play a note from that synth
-  synth.triggerAttackRelease("C#4", "8n");
-}
+
+
+
+
+
