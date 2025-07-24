@@ -21,7 +21,6 @@
           <button @click="stopSequence">Stop Sequence</button>
           <label for="bpm">BPM: {{ bpm }}</label>
           <input
-            id="bpm"
             type="number"
             :value="bpm"
             @wheel.prevent="onScrollBpm"
@@ -29,7 +28,19 @@
             readonly
             min="1"
             max="255"
-          />        </div>
+          /> 
+          <label for="volumeDb">Volume: {{ volumeDb }} dB</label>
+          <input
+            type="range"
+            :value="volumeDb"
+            @wheel.prevent="onScrollVolume"
+            @mousedown.prevent
+            @touchstart.prevent
+            min="-60"
+            max="0"
+            step="1"
+          />    
+        </div>
 
         <div class="gameboy-wrapper">
           <div class="gameboy-case">
@@ -54,6 +65,7 @@
                     <td>p</td>
                     <td>
                       <input
+                        id="pu1"
                         class="scroll-select"
                         type="text"
                         :value="notes[currentNoteIndex]"
@@ -63,6 +75,7 @@
                     </td>
                     <td>
                       <input
+                        id="pu2"
                         class="scroll-select"
                         type="text"
                         :value="pitches[currentPitchIndex]"
@@ -154,323 +167,7 @@
                         @wheel.prevent="onScrollCell($event, 'currentEffectIndex', 'effects')"
                         readonly />
                     </td>
-                  </tr>
-                  <tr>
-                    <td>p</td>
-                    <td>
-                      <input
-                        class="scroll-select"
-                        type="text"
-                        :value="notes[currentNoteIndex]"
-                        @wheel.prevent="onScrollCell($event, 'currentNoteIndex', 'notes')"
-                        @click="onClickCell('currentNoteIndex')"
-                        readonly />
-                    </td>
-                    <td>
-                      <input
-                        class="scroll-select"
-                        type="text"
-                        :value="pitches[currentPitchIndex]"
-                        @wheel.prevent="onScrollCell($event, 'currentPitchIndex', 'pitches')"
-                        @click="onClickCell('currentPitchIndex')"
-                        readonly />
-                    </td>
-                    <td>
-                      <input
-                        class="scroll-select"
-                        type="text"
-                        :value="effects[currentEffectIndex]"
-                        @wheel.prevent="onScrollCell($event, 'currentEffectIndex', 'effects')"
-                        @click="onClickCell('currentEffectIndex')"
-                        readonly />
-                    </td>
-
-                    <td>
-                      <input
-                        class="scroll-select"
-                        type="text"
-                        :value="notes[currentNoteIndex]"
-                        @wheel.prevent="onScrollCell($event, 'currentNoteIndex', 'notes')"
-                        readonly />
-                    </td>
-                    <td>
-                      <input
-                        class="scroll-select"
-                        type="text"
-                        :value="pitches[currentPitchIndex]"
-                        @wheel.prevent="onScrollCell($event, 'currentPitchIndex', 'pitches')"
-                        readonly />
-                    </td>
-                    <td>
-                      <input
-                        class="scroll-select"
-                        type="text"
-                        :value="effects[currentEffectIndex]"
-                        @wheel.prevent="onScrollCell($event, 'currentEffectIndex', 'effects')"
-                        readonly />
-                    </td>
-
-                    <td>
-                      <input
-                        class="scroll-select"
-                        type="text"
-                        :value="notes[currentNoteIndex]"
-                        @wheel.prevent="onScrollCell($event, 'currentNoteIndex', 'notes')"
-                        readonly />
-                    </td>
-                    <td>
-                      <input
-                        class="scroll-select"
-                        type="text"
-                        :value="pitches[currentPitchIndex]"
-                        @wheel.prevent="onScrollCell($event, 'currentPitchIndex', 'pitches')"
-                        readonly />
-                    </td>
-                    <td>
-                      <input
-                        class="scroll-select"
-                        type="text"
-                        :value="effects[currentEffectIndex]"
-                        @wheel.prevent="onScrollCell($event, 'currentEffectIndex', 'effects')"
-                        readonly />
-                    </td>
-
-                    <td>
-                      <input
-                        class="scroll-select"
-                        type="text"
-                        :value="notes[currentNoteIndex]"
-                        @wheel.prevent="onScrollCell($event, 'currentNoteIndex', 'notes')"
-                        readonly />
-                    </td>
-                    <td>
-                      <input
-                        class="scroll-select"
-                        type="text"
-                        :value="pitches[currentPitchIndex]"
-                        @wheel.prevent="onScrollCell($event, 'currentPitchIndex', 'pitches')"
-                        readonly />
-                    </td>
-                    <td>
-                      <input
-                        class="scroll-select"
-                        type="text"
-                        :value="effects[currentEffectIndex]"
-                        @wheel.prevent="onScrollCell($event, 'currentEffectIndex', 'effects')"
-                        readonly />
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>p</td>
-                    <td>
-                      <input
-                        class="scroll-select"
-                        type="text"
-                        :value="notes[currentNoteIndex]"
-                        @wheel.prevent="onScrollCell($event, 'currentNoteIndex', 'notes')"
-                        @click="onClickCell('currentNoteIndex')"
-                        readonly />
-                    </td>
-                    <td>
-                      <input
-                        class="scroll-select"
-                        type="text"
-                        :value="pitches[currentPitchIndex]"
-                        @wheel.prevent="onScrollCell($event, 'currentPitchIndex', 'pitches')"
-                        @click="onClickCell('currentPitchIndex')"
-                        readonly />
-                    </td>
-                    <td>
-                      <input
-                        class="scroll-select"
-                        type="text"
-                        :value="effects[currentEffectIndex]"
-                        @wheel.prevent="onScrollCell($event, 'currentEffectIndex', 'effects')"
-                        @click="onClickCell('currentEffectIndex')"
-                        readonly />
-                    </td>
-
-                    <td>
-                      <input
-                        class="scroll-select"
-                        type="text"
-                        :value="notes[currentNoteIndex]"
-                        @wheel.prevent="onScrollCell($event, 'currentNoteIndex', 'notes')"
-                        readonly />
-                    </td>
-                    <td>
-                      <input
-                        class="scroll-select"
-                        type="text"
-                        :value="pitches[currentPitchIndex]"
-                        @wheel.prevent="onScrollCell($event, 'currentPitchIndex', 'pitches')"
-                        readonly />
-                    </td>
-                    <td>
-                      <input
-                        class="scroll-select"
-                        type="text"
-                        :value="effects[currentEffectIndex]"
-                        @wheel.prevent="onScrollCell($event, 'currentEffectIndex', 'effects')"
-                        readonly />
-                    </td>
-
-                    <td>
-                      <input
-                        class="scroll-select"
-                        type="text"
-                        :value="notes[currentNoteIndex]"
-                        @wheel.prevent="onScrollCell($event, 'currentNoteIndex', 'notes')"
-                        readonly />
-                    </td>
-                    <td>
-                      <input
-                        class="scroll-select"
-                        type="text"
-                        :value="pitches[currentPitchIndex]"
-                        @wheel.prevent="onScrollCell($event, 'currentPitchIndex', 'pitches')"
-                        readonly />
-                    </td>
-                    <td>
-                      <input
-                        class="scroll-select"
-                        type="text"
-                        :value="effects[currentEffectIndex]"
-                        @wheel.prevent="onScrollCell($event, 'currentEffectIndex', 'effects')"
-                        readonly />
-                    </td>
-
-                    <td>
-                      <input
-                        class="scroll-select"
-                        type="text"
-                        :value="notes[currentNoteIndex]"
-                        @wheel.prevent="onScrollCell($event, 'currentNoteIndex', 'notes')"
-                        readonly />
-                    </td>
-                    <td>
-                      <input
-                        class="scroll-select"
-                        type="text"
-                        :value="pitches[currentPitchIndex]"
-                        @wheel.prevent="onScrollCell($event, 'currentPitchIndex', 'pitches')"
-                        readonly />
-                    </td>
-                    <td>
-                      <input
-                        class="scroll-select"
-                        type="text"
-                        :value="effects[currentEffectIndex]"
-                        @wheel.prevent="onScrollCell($event, 'currentEffectIndex', 'effects')"
-                        readonly />
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>p</td>
-                    <td>
-                      <input
-                        class="scroll-select"
-                        type="text"
-                        :value="notes[currentNoteIndex]"
-                        @wheel.prevent="onScrollCell($event, 'currentNoteIndex', 'notes')"
-                        @click="onClickCell('currentNoteIndex')"
-                        readonly />
-                    </td>
-                    <td>
-                      <input
-                        class="scroll-select"
-                        type="text"
-                        :value="pitches[currentPitchIndex]"
-                        @wheel.prevent="onScrollCell($event, 'currentPitchIndex', 'pitches')"
-                        @click="onClickCell('currentPitchIndex')"
-                        readonly />
-                    </td>
-                    <td>
-                      <input
-                        class="scroll-select"
-                        type="text"
-                        :value="effects[currentEffectIndex]"
-                        @wheel.prevent="onScrollCell($event, 'currentEffectIndex', 'effects')"
-                        @click="onClickCell('currentEffectIndex')"
-                        readonly />
-                    </td>
-
-                    <td>
-                      <input
-                        class="scroll-select"
-                        type="text"
-                        :value="notes[currentNoteIndex]"
-                        @wheel.prevent="onScrollCell($event, 'currentNoteIndex', 'notes')"
-                        readonly />
-                    </td>
-                    <td>
-                      <input
-                        class="scroll-select"
-                        type="text"
-                        :value="pitches[currentPitchIndex]"
-                        @wheel.prevent="onScrollCell($event, 'currentPitchIndex', 'pitches')"
-                        readonly />
-                    </td>
-                    <td>
-                      <input
-                        class="scroll-select"
-                        type="text"
-                        :value="effects[currentEffectIndex]"
-                        @wheel.prevent="onScrollCell($event, 'currentEffectIndex', 'effects')"
-                        readonly />
-                    </td>
-
-                    <td>
-                      <input
-                        class="scroll-select"
-                        type="text"
-                        :value="notes[currentNoteIndex]"
-                        @wheel.prevent="onScrollCell($event, 'currentNoteIndex', 'notes')"
-                        readonly />
-                    </td>
-                    <td>
-                      <input
-                        class="scroll-select"
-                        type="text"
-                        :value="pitches[currentPitchIndex]"
-                        @wheel.prevent="onScrollCell($event, 'currentPitchIndex', 'pitches')"
-                        readonly />
-                    </td>
-                    <td>
-                      <input
-                        class="scroll-select"
-                        type="text"
-                        :value="effects[currentEffectIndex]"
-                        @wheel.prevent="onScrollCell($event, 'currentEffectIndex', 'effects')"
-                        readonly />
-                    </td>
-
-                    <td>
-                      <input
-                        class="scroll-select"
-                        type="text"
-                        :value="notes[currentNoteIndex]"
-                        @wheel.prevent="onScrollCell($event, 'currentNoteIndex', 'notes')"
-                        readonly />
-                    </td>
-                    <td>
-                      <input
-                        class="scroll-select"
-                        type="text"
-                        :value="pitches[currentPitchIndex]"
-                        @wheel.prevent="onScrollCell($event, 'currentPitchIndex', 'pitches')"
-                        readonly />
-                    </td>
-                    <td>
-                      <input
-                        class="scroll-select"
-                        type="text"
-                        :value="effects[currentEffectIndex]"
-                        @wheel.prevent="onScrollCell($event, 'currentEffectIndex', 'effects')"
-                        readonly />
-                    </td>
-                  </tr>
-                  
+                  </tr>                  
                   
                 </table>
               </div>

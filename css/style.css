@@ -108,13 +108,17 @@ h1 {
   font-size: 0.8em; 
   width: 1.8em;
   padding: 0.2em;
-  border: 1px solid #e0f8d0;
+  border: 0.1em solid #e0f8d0;
   background-color: #c2f394;
   cursor: ns-resize;
   text-align: center;
   user-select: none;
   font-weight: bold;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#pu1 {
+    width: 2.4em;
 }
 
 .scroll-select:hover {
