@@ -48,3 +48,4 @@ L’interface reprend l’esprit Game Boy :
 ## Note
 
 - 25/06/2025 - Ceci est un premier git push, le projet n'est pas encore fonctionnel !
+- 18/08/2025 - La première colonne de notes fonctionne mais il y a encore des comportements erratiques à corriger (rien de totalement fonctionnel pour le moment).
