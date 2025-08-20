@@ -2,86 +2,103 @@ const app = new Vue({
   el: "#app",
   data: {
     tableData: [
-      [
-        { noteIndex: 0 },
-        { durationIndex: 0 },
-        { velocityIndex: 0 }
-      ],
-      [
-        { noteIndex: 0 },
-        { durationIndex: 0 },
-        { velocityIndex: 0 }
-      ],
-      [
-        { noteIndex: 0 },
-        { durationIndex: 0 },
-        { velocityIndex: 0 }
-      ],
-      [
-        { noteIndex: 0 },
-        { durationIndex: 0 },
-        { velocityIndex: 0 }
-      ],
-      [
-        { noteIndex: 0 },
-        { durationIndex: 0 },
-        { velocityIndex: 0 }
-      ],
-      [
-        { noteIndex: 0 },
-        { durationIndex: 0 },
-        { velocityIndex: 0 }
-      ],
-      [
-        { noteIndex: 0 },
-        { durationIndex: 0 },
-        { velocityIndex: 0 }
-      ],
-      [
-        { noteIndex: 0 },
-        { durationIndex: 0 },
-        { velocityIndex: 0 }
-      ],
-      [
-        { noteIndex: 0 },
-        { durationIndex: 0 },
-        { velocityIndex: 0 }
-      ],
-      [
-        { noteIndex: 0 },
-        { durationIndex: 0 },
-        { velocityIndex: 0 }
-      ],
-      [
-        { noteIndex: 0 },
-        { durationIndex: 0 },
-        { velocityIndex: 0 }
-      ],
-      [
-        { noteIndex: 0 },
-        { durationIndex: 0 },
-        { velocityIndex: 0 }
-      ],
-      [
-        { noteIndex: 0 },
-        { durationIndex: 0 },
-        { velocityIndex: 0 }
-      ],
-      [
-        { noteIndex: 0 },
-        { durationIndex: 0 },
-        { velocityIndex: 0 }
-      ],
-      [
-        { noteIndex: 0 },
-        { durationIndex: 0 },
-        { velocityIndex: 0 }
-      ],
-      [
-        { noteIndex: 0 },
-        { durationIndex: 0 },
-        { velocityIndex: 0 }
-      ],
+      {
+        pulse1: { noteIndex: 0, durationIndex: 0, velocityIndex: 0 },
+        pulse2: { noteIndex: null, durationIndex: null, velocityIndex: null },
+        wave3: { noteIndex: null, durationIndex: null, velocityIndex: null },
+        noise4: { noteIndex: null, durationIndex: null, velocityIndex: null }
+      },
+      {
+        pulse1: { noteIndex: 0, durationIndex: 0, velocityIndex: 0 },
+        pulse2: { noteIndex: null, durationIndex: null, velocityIndex: null },
+        wave3: { noteIndex: null, durationIndex: null, velocityIndex: null },
+        noise4: { noteIndex: null, durationIndex: null, velocityIndex: null }
+      },
+      {
+        pulse1: { noteIndex: 0, durationIndex: 0, velocityIndex: 0 },
+        pulse2: { noteIndex: null, durationIndex: null, velocityIndex: null },
+        wave3: { noteIndex: null, durationIndex: null, velocityIndex: null },
+        noise4: { noteIndex: null, durationIndex: null, velocityIndex: null }
+      },
+      {
+        pulse1: { noteIndex: 0, durationIndex: 0, velocityIndex: 0 },
+        pulse2: { noteIndex: null, durationIndex: null, velocityIndex: null },
+        wave3: { noteIndex: null, durationIndex: null, velocityIndex: null },
+        noise4: { noteIndex: null, durationIndex: null, velocityIndex: null }
+      },
+      {
+        pulse1: { noteIndex: 0, durationIndex: 0, velocityIndex: 0 },
+        pulse2: { noteIndex: null, durationIndex: null, velocityIndex: null },
+        wave3: { noteIndex: null, durationIndex: null, velocityIndex: null },
+        noise4: { noteIndex: null, durationIndex: null, velocityIndex: null }
+      },
+      {
+        pulse1: { noteIndex: 0, durationIndex: 0, velocityIndex: 0 },
+        pulse2: { noteIndex: null, durationIndex: null, velocityIndex: null },
+        wave3: { noteIndex: null, durationIndex: null, velocityIndex: null },
+        noise4: { noteIndex: null, durationIndex: null, velocityIndex: null }
+      },
+      {
+        pulse1: { noteIndex: 0, durationIndex: 0, velocityIndex: 0 },
+        pulse2: { noteIndex: null, durationIndex: null, velocityIndex: null },
+        wave3: { noteIndex: null, durationIndex: null, velocityIndex: null },
+        noise4: { noteIndex: null, durationIndex: null, velocityIndex: null }
+      },
+      {
+        pulse1: { noteIndex: 0, durationIndex: 0, velocityIndex: 0 },
+        pulse2: { noteIndex: null, durationIndex: null, velocityIndex: null },
+        wave3: { noteIndex: null, durationIndex: null, velocityIndex: null },
+        noise4: { noteIndex: null, durationIndex: null, velocityIndex: null }
+      },
+      {
+        pulse1: { noteIndex: 0, durationIndex: 0, velocityIndex: 0 },
+        pulse2: { noteIndex: null, durationIndex: null, velocityIndex: null },
+        wave3: { noteIndex: null, durationIndex: null, velocityIndex: null },
+        noise4: { noteIndex: null, durationIndex: null, velocityIndex: null }
+      },
+      {
+        pulse1: { noteIndex: 0, durationIndex: 0, velocityIndex: 0 },
+        pulse2: { noteIndex: null, durationIndex: null, velocityIndex: null },
+        wave3: { noteIndex: null, durationIndex: null, velocityIndex: null },
+        noise4: { noteIndex: null, durationIndex: null, velocityIndex: null }
+      },
+      {
+        pulse1: { noteIndex: 0, durationIndex: 0, velocityIndex: 0 },
+        pulse2: { noteIndex: null, durationIndex: null, velocityIndex: null },
+        wave3: { noteIndex: null, durationIndex: null, velocityIndex: null },
+        noise4: { noteIndex: null, durationIndex: null, velocityIndex: null }
+      },
+      {
+        pulse1: { noteIndex: 0, durationIndex: 0, velocityIndex: 0 },
+        pulse2: { noteIndex: null, durationIndex: null, velocityIndex: null },
+        wave3: { noteIndex: null, durationIndex: null, velocityIndex: null },
+        noise4: { noteIndex: null, durationIndex: null, velocityIndex: null }
+      },
+      {
+        pulse1: { noteIndex: 0, durationIndex: 0, velocityIndex: 0 },
+        pulse2: { noteIndex: null, durationIndex: null, velocityIndex: null },
+        wave3: { noteIndex: null, durationIndex: null, velocityIndex: null },
+        noise4: { noteIndex: null, durationIndex: null, velocityIndex: null }
+      },
+      {
+        pulse1: { noteIndex: 0, durationIndex: 0, velocityIndex: 0 },
+        pulse2: { noteIndex: null, durationIndex: null, velocityIndex: null },
+        wave3: { noteIndex: null, durationIndex: null, velocityIndex: null },
+        noise4: { noteIndex: null, durationIndex: null, velocityIndex: null }
+      },
+      {
+        pulse1: { noteIndex: 0, durationIndex: 0, velocityIndex: 0 },
+        pulse2: { noteIndex: null, durationIndex: null, velocityIndex: null },
+        wave3: { noteIndex: null, durationIndex: null, velocityIndex: null },
+        noise4: { noteIndex: null, durationIndex: null, velocityIndex: null }
+      },
+      {
+        pulse1: { noteIndex: 0, durationIndex: 0, velocityIndex: 0 },
+        pulse2: { noteIndex: null, durationIndex: null, velocityIndex: null },
+        wave3: { noteIndex: null, durationIndex: null, velocityIndex: null },
+        noise4: { noteIndex: null, durationIndex: null, velocityIndex: null }
+      },
+      
     ],
     notes: [
       null,
@@ -111,10 +128,19 @@ const app = new Vue({
 
   computed: {
     pulse1Notes() {
-      return this.tableData.map(row => {
-        const noteIndex = row[0].noteIndex;
-        return noteIndex >= 0 ? this.notes[noteIndex] : null;
-      });
+      return this.tableData.map(row =>
+        row.pulse1.noteIndex >= 0 ? this.notes[row.pulse1.noteIndex] : null
+      );
+    },
+    pulse1Durations() {
+      return this.tableData.map(row =>
+        row.pulse1.durationIndex != null ? this.durations[row.pulse1.durationIndex] : "8n"
+      );
+    },
+    pulse1Velocities() {
+      return this.tableData.map(row =>
+        row.pulse1.velocityIndex != null ? this.velocityMap[this.velocities[row.pulse1.velocityIndex]] : 0
+      );
     },
   },
 
@@ -131,121 +157,129 @@ const app = new Vue({
   
   mounted() {
     this.masterVolume = new Tone.Volume(this.volumeDb).toDestination();
-
-    // Synths initialisation
+    
     this.pu1Synth = new Tone.Synth({
-      oscillator: {
-        type: "pulse",
-        width: 0.125, // 0.125, 0.25, 0.50, 0.75
-      },
-    }).connect(this.masterVolume); // plugs the synth to the master volume
+      oscillator: { type: "pulse", width: 0.125 }
+    }).connect(this.masterVolume);
     
     this.pu2Synth = new Tone.Synth({
-      oscillator: {
-        type: "pulse",
-        width: 0.125, // 0.125, 0.25, 0.50, 0.75
-      },
-    }).connect(this.masterVolume); // plugs the synth to the master volume
+      oscillator: { type: "pulse", width: 0.125 }
+    }).connect(this.masterVolume);
   },
 
   methods: {
   // -- Cell Methods -- //
 
     // Méthode générique pour mettre à jour une cellule
-    updateCell(rowIndex, colIndex, indexKey, newIndex) {
-      this.$set(this.tableData[rowIndex][colIndex], indexKey, newIndex);
+    updateCell(rowIndex, synthKey, indexKey, newIndex) {
+      if (this.tableData[rowIndex][synthKey]) {
+        this.$set(this.tableData[rowIndex][synthKey], indexKey, newIndex);
+      }
     },
 
-    // Gestion du scroll (incrément/décrément circulaire)
-    onScrollCell(event, rowIndex, colIndex, indexKey, listName) {
+    onScrollCell(event, synthKey, indexKey, rowIndex, listName) {
       const dir = event.deltaY > 0 ? -1 : 1;
       const list = this[listName];
-      let currentIndex = this.tableData[rowIndex][colIndex][indexKey];
-
+      const currentIndex = this.tableData[rowIndex][synthKey]?.[indexKey] ?? 0;
       const newIndex = (currentIndex + dir + list.length) % list.length;
-
-      this.updateCell(rowIndex, colIndex, indexKey, newIndex);
+      this.$set(this.tableData[rowIndex][synthKey], indexKey, newIndex);
     },
-
-    // Gestion du clic (reset à 0)
-    onClickCell(rowIndex, colIndex, indexKey) {
-      this.$set(this.tableData[rowIndex][colIndex], indexKey, 0);
+    
+    onClickCell(rowIndex, synthKey, indexKey) {
+      if (this.tableData[rowIndex][synthKey]) {
+        this.$set(this.tableData[rowIndex][synthKey], indexKey, 0);
+      }
     },
 
     // Affichage du contenu d'une cellule
-    displayValue(cell, colIndex) {
-      const key = Object.keys(cell)[0];
-      const index = cell[key];
-
-      if (colIndex === 0) return this.notes[index];
-      if (colIndex === 1) return this.durations[index];
-      if (colIndex === 2) return this.velocities[index];
-      return null;
+    displayValue(row, synthKey, indexKey) {
+      const cell = row[synthKey];
+      if (!cell || cell[indexKey] == null) return "";
+    
+      const index = cell[indexKey];
+    
+      if (indexKey === "noteIndex") return this.notes[index] ?? "";
+      if (indexKey === "durationIndex") return this.durations[index] ?? "";
+      if (indexKey === "velocityIndex") return this.velocities[index] ?? "";
+      
+      return "";
     },
 
-  onScrollBpm(event) {
-    let step = 1;
-    if (event.shiftKey) step = 10;
-    if (event.ctrlKey) step = 5;
+    onScrollBpm(event) {
+      let step = 1;
+      if (event.shiftKey) step = 10;
+      if (event.ctrlKey) step = 5;
 
-    const delta = Math.sign(event.deltaY);
-    if (delta < 0 && this.bpm < 255) {
-      this.bpm = Math.min(255, this.bpm + step);
-    } else if (delta > 0 && this.bpm > 1) {
-      this.bpm = Math.max(1, this.bpm - step);
-    }
-  },
+      const delta = Math.sign(event.deltaY);
+      if (delta < 0 && this.bpm < 255) {
+        this.bpm = Math.min(255, this.bpm + step);
+      } else if (delta > 0 && this.bpm > 1) {
+        this.bpm = Math.max(1, this.bpm - step);
+      }
+    },
 
-  onScrollVolume(event) {
-    const delta = Math.sign(event.deltaY);
-    let newVal = this.volumeDb - delta; // molette haut = +1
-    if (newVal > 0) newVal = 0;
-    if (newVal < -60) newVal = -60;
-    this.volumeDb = newVal;
-  },
+    onScrollVolume(event) {
+      const delta = Math.sign(event.deltaY);
+      let newVal = this.volumeDb - delta; // molette haut = +1
+      if (newVal > 0) newVal = 0;
+      if (newVal < -60) newVal = -60;
+      this.volumeDb = newVal;
+    },
 
-  onAddSequence() {
-    for (let i = 0; i < 16; i++) {
-      const row = [
-        { noteIndex: 0, durationIndex: 0, velocityIndex: 0 },
-        { noteIndex: 0, durationIndex: 0, velocityIndex: 0 },
-        { noteIndex: 0, durationIndex: 0, velocityIndex: 0 },
-        { noteIndex: 0, durationIndex: 0, velocityIndex: 0 },
-      ];
-      this.sequences.push(row);
-    }
-  },
+    onAddSequence() {
+      for (let i = 0; i < 16; i++) {
+        const row = [
+          {
+            pulse1: { noteIndex: 0, durationIndex: 0, velocityIndex: 0 },
+            pulse2: { noteIndex: null, durationIndex: null, velocityIndex: null },
+            wave3: { noteIndex: null, durationIndex: null, velocityIndex: null },
+            noise4: { noteIndex: null, durationIndex: null, velocityIndex: null }
+          }
+        ];
+        this.sequences.push(row);
+      }
+    },
 
-  onRemoveSequence() {
-    // remove 16 dernières lignes (ou adapte à ton besoin)
-    this.sequences.splice(Math.max(0, this.sequences.length - 16), 16);
-  },
+    onRemoveSequence() {
+      // remove 16 dernières lignes (ou adapte à ton besoin)
+      this.sequences.splice(Math.max(0, this.sequences.length - 16), 16);
+    },
 
-  updatePulse1Notes() {
-    this.pulse1Notes = this.tableData.map(row => {
-      const noteIndex = row[0].noteIndex;
-      return noteIndex >= 0 ? this.notes[noteIndex] : null;
-    });
-  },
+    updatePulse1Notes() {
+      this.pulse1Notes = this.tableData.map(row => {
+        const noteIndex = row[0].noteIndex;
+        return noteIndex >= 0 ? this.notes[noteIndex] : null;
+      });
+    },
 
-  async playSequence() {
-    if (Tone.context.state !== "running") {
-      await Tone.start(); // <- () !
-    }
-    const sequence = new Tone.Sequence(
-      (time, note) => {
-        if (note) this.pu1Synth.triggerAttackRelease(note, "8n", time);
-      },
-      this.pulse1Notes,
-      "8n"
-    );
-
-    Tone.Transport.bpm.value = this.bpm;
-    sequence.start(0);
-    Tone.Transport.start();
-  },
+    async playSequence() {
+      if (Tone.context.state !== "running") await Tone.start();
+    
+      // reset du transport
+      Tone.Transport.cancel();
+      Tone.Transport.stop();
+    
+      const seq1 = new Tone.Sequence(
+        (time, stepIndex) => {
+          const note = this.pulse1Notes[stepIndex];
+          const duration = this.pulse1Durations[stepIndex] || "8n";
+          const velocity = this.pulse1Velocities[stepIndex] || 0.8;
+          if (note) this.pu1Synth.triggerAttackRelease(note, duration, time, velocity);
+        },
+        this.pulse1Notes.map((_, i) => i),"8n"
+      );
+    
+      Tone.Transport.bpm.value = this.bpm;
+      seq1.start(0);
+      Tone.Transport.start();
+    },
 
   stopSequence() {
+    if (this.currentSequence) {
+      this.currentSequence.stop();
+      this.currentSequence.dispose();
+      this.currentSequence = null;
+    }
     Tone.Transport.stop();
   },
 
@@ -257,10 +291,10 @@ const app = new Vue({
 
   // -- Synths Methods -- //
 
-    setPulseWidth(synth, width) {
-      if (synth?.oscillator?.width) {
-        synth.oscillator.width.value = width;
-      }
-    },
+  setPulseWidth(synth, width) {
+    if (synth?.oscillator?.width) {
+      synth.oscillator.width.value = width;
+    }
   },
+},
 });

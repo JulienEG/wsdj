@@ -67,38 +67,41 @@
                       <td>
                         <span v-if="currentPlayingRow === rowIndex">➡️</span>
                       </td>
-
-                      <!-- Note -->
+                  
+                      <!-- Pulse1 Note -->
                       <td>
                         <input
                           class="scroll-select"
                           type="text"
-                          :value="notes[row[0].noteIndex]"
-                          @wheel.prevent="onScrollCell($event, rowIndex, 0, 'noteIndex', 'notes')"
-                          @click="onClickCell(rowIndex, 0, 'noteIndex')"
-                          readonly />
+                          :value="displayValue(row, 'pulse1', 'noteIndex')"
+                          @wheel.prevent="onScrollCell($event, 'pulse1', 'noteIndex', rowIndex, 'notes')"
+                          @click="onClickCell(rowIndex, 'pulse1', 'noteIndex')"
+                          readonly
+                        />
                       </td>
-
-                      <!-- Duration -->
+                  
+                      <!-- Pulse1 Duration -->
                       <td>
                         <input
                           class="scroll-select"
                           type="text"
-                          :value="durations[row[1].durationIndex]"
-                          @wheel.prevent="onScrollCell($event, rowIndex, 1, 'durationIndex', 'durations')"
-                          @click="onClickCell(rowIndex, 1, 'durationIndex')"
-                          readonly />
+                          :value="displayValue(row, 'pulse1', 'durationIndex')"
+                          @wheel.prevent="onScrollCell($event, 'pulse1', 'durationIndex', rowIndex, 'durations')"
+                          @click="onClickCell(rowIndex, 'pulse1', 'durationIndex')"
+                          readonly
+                        />
                       </td>
-
-                      <!-- Velocity -->
+                  
+                      <!-- Pulse1 Velocity -->
                       <td>
                         <input
                           class="scroll-select"
                           type="text"
-                          :value="velocities[row[2].velocityIndex]"
-                          @wheel.prevent="onScrollCell($event, rowIndex, 2, 'velocityIndex', 'velocities')"
-                          @click="onClickCell(rowIndex, 2, 'velocityIndex')"
-                          readonly />
+                          :value="displayValue(row, 'pulse1', 'velocityIndex')"
+                          @wheel.prevent="onScrollCell($event, 'pulse1', 'velocityIndex', rowIndex, 'velocities')"
+                          @click="onClickCell(rowIndex, 'pulse1', 'velocityIndex')"
+                          readonly
+                        />
                       </td>
                     </tr>
                   </tbody>
