@@ -62,7 +62,9 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr v-for="(row, rowIndex) in tableData" :key="rowIndex">
+                    <tr v-for="(row, rowIndex) in tableData" 
+                    :key="rowIndex"
+                    :style="{ backgroundColor: rowIndex % 4 === 0 ? '#8db16c' : '#c2f394' }">
                       <!-- flèche -->
                       <td>
                         <span v-if="currentPlayingRow === rowIndex">➡️</span>
@@ -74,6 +76,7 @@
                           class="scroll-select"
                           type="text"
                           :value="displayValue(row, 'pulse1', 'noteIndex')"
+                          :style="{ backgroundColor: rowIndex % 4 === 0 ? '#8db16c' : '#c2f394' }"
                           @wheel.prevent="onScrollCell($event, 'pulse1', 'noteIndex', rowIndex, 'notes')"
                           @click="onClickCell(rowIndex, 'pulse1', 'noteIndex')"
                           readonly
@@ -86,6 +89,7 @@
                           class="scroll-select"
                           type="text"
                           :value="displayValue(row, 'pulse1', 'durationIndex')"
+                          :style="{ backgroundColor: rowIndex % 4 === 0 ? '#8db16c' : '#c2f394' }"
                           @wheel.prevent="onScrollCell($event, 'pulse1', 'durationIndex', rowIndex, 'durations')"
                           @click="onClickCell(rowIndex, 'pulse1', 'durationIndex')"
                           readonly
@@ -98,6 +102,7 @@
                           class="scroll-select"
                           type="text"
                           :value="displayValue(row, 'pulse1', 'velocityIndex')"
+                          :style="{ backgroundColor: rowIndex % 4 === 0 ? '#8db16c' : '#c2f394' }"
                           @wheel.prevent="onScrollCell($event, 'pulse1', 'velocityIndex', rowIndex, 'velocities')"
                           @click="onClickCell(rowIndex, 'pulse1', 'velocityIndex')"
                           readonly
