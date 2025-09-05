@@ -126,6 +126,10 @@ h2 {
     padding: 0.5em, 1em; 
   }
 
+ .sub-head th {
+    font-size: 0.65em; 
+ } 
+
 .scroll-select {    
   font-family: early-gameboy, sans-serif;
   color: #081820; 

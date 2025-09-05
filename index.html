@@ -17,8 +17,8 @@
 
       <div class="main">
         <div class="center">
-          <button @click="playSequence">Play Sequence</button>
-          <button @click="stopSequence">Stop Sequence</button>
+          <button @click="playSequence">▶ Play</button>
+          <button @click="stopSequence">⏹ Stop</button>
           <label for="bpm">BPM: {{ bpm }}</label>
           <input
             type="number"
@@ -60,30 +60,41 @@
                       <th colspan="3">Wav</th>
                       <th colspan="3">Noi</th>
                     </tr>
+                    <tr class="sub-head">
+                      <th></th>
+                      <!-- Pu1 labels -->
+                      <th>Note</th><th>Dur</th><th>Vel</th>
+                      <!-- Pu2 labels -->
+                      <th>Note</th><th>Dur</th><th>Vel</th>
+                      <!-- Wav labels -->
+                      <th>Note</th><th>Dur</th><th>Vel</th>
+                      <!-- Noi labels -->
+                      <!-- <th>Note</th><th>Dur</th><th>Vel</th> -->
+                    </tr>
+
                   </thead>
                   <tbody>
                     <tr v-for="(row, rowIndex) in tableData" 
-                    :key="rowIndex"
-                    :style="{ backgroundColor: rowIndex % 4 === 0 ? '#8db16c' : '#c2f394' }">
+                        :key="rowIndex"
+                        :style="{ backgroundColor: rowIndex % 4 === 0 ? '#8db16c' : '#c2f394' }">
+                  
                       <!-- flèche -->
                       <td>
                         <span v-if="currentPlayingRow === rowIndex">➡️</span>
                       </td>
                   
-                      <!-- Pulse1 Note -->
+                      <!-- === PULSE 1 === -->
                       <td>
                         <input
                           class="scroll-select"
                           type="text"
                           :value="displayValue(row, 'pulse1', 'noteIndex')"
-                          :style="{ backgroundColor: rowIndex % 4 === 0 ? '#8db16c' : '#c2f394' }"
+                          :style="{ backgroundColor: '#8db16c' }"
                           @wheel.prevent="onScrollCell($event, 'pulse1', 'noteIndex', rowIndex, 'notes')"
                           @click="onClickCell(rowIndex, 'pulse1', 'noteIndex')"
                           readonly
                         />
                       </td>
-                  
-                      <!-- Pulse1 Duration -->
                       <td>
                         <input
                           class="scroll-select"
@@ -95,8 +106,6 @@
                           readonly
                         />
                       </td>
-                  
-                      <!-- Pulse1 Velocity -->
                       <td>
                         <input
                           class="scroll-select"
@@ -108,6 +117,112 @@
                           readonly
                         />
                       </td>
+                  
+                      <!-- === PULSE 2 === -->
+                      <td>
+                        <input
+                          class="scroll-select"
+                          type="text"
+                          :value="displayValue(row, 'pulse2', 'noteIndex')"
+                          :style="{ backgroundColor: '#8db16c' }"
+                          @wheel.prevent="onScrollCell($event, 'pulse2', 'noteIndex', rowIndex, 'notes')"
+                          @click="onClickCell(rowIndex, 'pulse2', 'noteIndex')"
+                          readonly
+                        />
+                      </td>
+                      <td>
+                        <input
+                          class="scroll-select"
+                          type="text"
+                          :value="displayValue(row, 'pulse2', 'durationIndex')"
+                          :style="{ backgroundColor: rowIndex % 4 === 0 ? '#8db16c' : '#c2f394' }"
+                          @wheel.prevent="onScrollCell($event, 'pulse2', 'durationIndex', rowIndex, 'durations')"
+                          @click="onClickCell(rowIndex, 'pulse2', 'durationIndex')"
+                          readonly
+                        />
+                      </td>
+                      <td>
+                        <input
+                          class="scroll-select"
+                          type="text"
+                          :value="displayValue(row, 'pulse2', 'velocityIndex')"
+                          :style="{ backgroundColor: rowIndex % 4 === 0 ? '#8db16c' : '#c2f394' }"
+                          @wheel.prevent="onScrollCell($event, 'pulse2', 'velocityIndex', rowIndex, 'velocities')"
+                          @click="onClickCell(rowIndex, 'pulse2', 'velocityIndex')"
+                          readonly
+                        />
+                      </td>
+
+                      <!-- === WAVE 3 === -->
+                      <td>
+                        <input
+                          class="scroll-select"
+                          type="text"
+                          :value="displayValue(row, 'wave3', 'noteIndex')"
+                          :style="{ backgroundColor: '#8db16c' }"
+                          @wheel.prevent="onScrollCell($event, 'wave3', 'noteIndex', rowIndex, 'notes')"
+                          @click="onClickCell(rowIndex, 'wave3', 'noteIndex')"
+                          readonly
+                        />
+                      </td>
+                      <td>
+                        <input
+                          class="scroll-select"
+                          type="text"
+                          :value="displayValue(row, 'wave3', 'durationIndex')"
+                          :style="{ backgroundColor: rowIndex % 4 === 0 ? '#8db16c' : '#c2f394' }"
+                          @wheel.prevent="onScrollCell($event, 'wave3', 'durationIndex', rowIndex, 'durations')"
+                          @click="onClickCell(rowIndex, 'wave3', 'durationIndex')"
+                          readonly
+                        />
+                      </td>
+                      <td>
+                        <input
+                          class="scroll-select"
+                          type="text"
+                          :value="displayValue(row, 'wave3', 'velocityIndex')"
+                          :style="{ backgroundColor: rowIndex % 4 === 0 ? '#8db16c' : '#c2f394' }"
+                          @wheel.prevent="onScrollCell($event, 'wave3', 'velocityIndex', rowIndex, 'velocities')"
+                          @click="onClickCell(rowIndex, 'wave3', 'velocityIndex')"
+                          readonly
+                        />
+                      </td>
+
+                      <!-- === NOISE 4 ===
+                      <td>
+                        <input
+                          class="scroll-select"
+                          type="text"
+                          :value="displayValue(row, 'noise4', 'noteIndex')"
+                          :style="{ backgroundColor: rowIndex % 4 === 0 ? '#8db16c' : '#c2f394' }"
+                          @wheel.prevent="onScrollCell($event, 'noise4', 'noteIndex', rowIndex, 'notes')"
+                          @click="onClickCell(rowIndex, 'noise4', 'noteIndex')"
+                          readonly
+                        />
+                      </td>
+                      <td>
+                        <input
+                          class="scroll-select"
+                          type="text"
+                          :value="displayValue(row, 'noise4', 'durationIndex')"
+                          :style="{ backgroundColor: rowIndex % 4 === 0 ? '#8db16c' : '#c2f394' }"
+                          @wheel.prevent="onScrollCell($event, 'noise4', 'durationIndex', rowIndex, 'durations')"
+                          @click="onClickCell(rowIndex, 'noise4', 'durationIndex')"
+                          readonly
+                        />
+                      </td>
+                      <td>
+                        <input
+                          class="scroll-select"
+                          type="text"
+                          :value="displayValue(row, 'noise4', 'velocityIndex')"
+                          :style="{ backgroundColor: rowIndex % 4 === 0 ? '#8db16c' : '#c2f394' }"
+                          @wheel.prevent="onScrollCell($event, 'noise4', 'velocityIndex', rowIndex, 'velocities')"
+                          @click="onClickCell(rowIndex, 'noise4', 'velocityIndex')"
+                          readonly
+                        />
+                      </td> -->
+                  
                     </tr>
                   </tbody>
                 </table>
